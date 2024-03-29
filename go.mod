@@ -1,4 +1,4 @@
-module github.com/luthermonson/go-proxmox
+module github.com/phaus/go-proxmox
 
 go 1.20
 

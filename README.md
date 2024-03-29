@@ -5,6 +5,9 @@
 [![GitHub issues](https://img.shields.io/github/issues/luthermonson/go-proxmox)](https://github.com/luthermonson/go-proxmox/issues)
 [![GitHub release](https://img.shields.io/github/release/luthermonson/go-proxmox.svg)](https://GitHub.com/luthermonson/go-proxmox/releases/) [![codecov](https://codecov.io/gh/luthermonson/go-proxmox/graph/badge.svg?token=GQSSZ0ZHZ4)](https://codecov.io/gh/luthermonson/go-proxmox) [![Go Report Card](https://goreportcard.com/badge/github.com/luthermonson/go-proxmox)](https://goreportcard.com/report/github.com/luthermonson/go-proxmox) [![Go Reference](https://pkg.go.dev/badge/github.com/luthermonson/go-proxmox.svg)](https://pkg.go.dev/github.com/luthermonson/go-proxmox)
 
+This is a fork of [https://github.com/luthermonson/go-proxmox](https://github.com/luthermonson/go-proxmox).  
+It has the Terminal dependency optional configure by a build tag.  
+
 Join the community to discuss ongoing client development usage, the proxmox API or tooling in the [#go-proxmox](https://gophers.slack.com/archives/C05920LDDD3) channel on the Gophers Slack and see the [self generated docs](https://pkg.go.dev/github.com/luthermonson/go-proxmox) for more usage details.
 
 [![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://gophers.slack.com/archives/C05920LDDD3)
