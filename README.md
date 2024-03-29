@@ -1,5 +1,6 @@
 
 # Proxmox API Client Go Package
+
 [![Continuous Integration](https://github.com/luthermonson/go-proxmox/actions/workflows/ci.yaml/badge.svg)](https://github.com/luthermonson/go-proxmox/actions/workflows/ci.yaml) [![GitHub license](https://img.shields.io/github/license/luthermonson/go-proxmox)](https://github.com/luthermonson/go-proxmox/blob/main/LICENSE)
 [![GitHub issues](https://img.shields.io/github/issues/luthermonson/go-proxmox)](https://github.com/luthermonson/go-proxmox/issues)
 [![GitHub release](https://img.shields.io/github/release/luthermonson/go-proxmox.svg)](https://GitHub.com/luthermonson/go-proxmox/releases/) [![codecov](https://codecov.io/gh/luthermonson/go-proxmox/graph/badge.svg?token=GQSSZ0ZHZ4)](https://codecov.io/gh/luthermonson/go-proxmox) [![Go Report Card](https://goreportcard.com/badge/github.com/luthermonson/go-proxmox)](https://goreportcard.com/report/github.com/luthermonson/go-proxmox) [![Go Reference](https://pkg.go.dev/badge/github.com/luthermonson/go-proxmox.svg)](https://pkg.go.dev/github.com/luthermonson/go-proxmox)
@@ -7,7 +8,6 @@
 Join the community to discuss ongoing client development usage, the proxmox API or tooling in the [#go-proxmox](https://gophers.slack.com/archives/C05920LDDD3) channel on the Gophers Slack and see the [self generated docs](https://pkg.go.dev/github.com/luthermonson/go-proxmox) for more usage details.
 
 [![Slack](https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)](https://gophers.slack.com/archives/C05920LDDD3)
-
 
 A go client for [Proxmox VE](https://www.proxmox.com/). The client implements [/api2/json](https://pve.proxmox.com/pve-docs/api-viewer/index.html) and inspiration was drawn from the existing [Telmate](https://github.com/Telmate/proxmox-api-go/tree/master/proxmox) package but looking to improve in the following ways...
 * Treated as a proper standalone go package
@@ -32,9 +32,11 @@ around this library to make that easier.
 * [Cluster API Provider Proxmox](https://github.com/luthermonson/cluster-api-provider-proxmox) to create kubernetes clusters
 
 ## Usage
+
 Create a client and use the public methods to access Proxmox resources.
 
 ### Basic usage with login with a username and password credential
+
 ```go
 package main
 
@@ -63,6 +65,7 @@ func main() {
 ```
 
 ### Usage with Client Options
+
 ```go
 package main
 
@@ -100,17 +103,21 @@ func main() {
 ```
 
 # Developing
+
 This project relies on [Mage](https://magefile.org/) for cross os/arch compatibility, please see their installation guide. 
 
 ## Unit Testing
+
 Run `mage test` to run the unit tests in the root directory.
 
 ## Integration Testing
+
 To run the integration testing suite against an existing Proxmox API set some env vars in your shell before running `mage testIntegration`. The integration tests will test logging in and using an API token credentials so make sure you set all five env vars before running tests for them to pass.
 
 Please leave no trace when developing integration tests. All tests should create and remove all testing data they generate then they can be repeatably run against the same proxmox environment. Most people working on this package will likely use their personal Proxmox VE home lab and consuming extra resources via tests will lead to frustration.
 
 ### Bash
+
 ```shell
 export PROXMOX_URL="https://192.168.1.6:8006/api2/json"
 export PROXMOX_USERNAME="root@pam"
@@ -122,6 +129,7 @@ mage test:integration
 ```
 
 ### Powershell
+
 ```powershell
 $Env:PROXMOX_URL = "https://192.168.1.6:8006/api2/json"
 $Env:PROXMOX_USERNAME = "root@pam"
@@ -131,5 +139,3 @@ $Env:PROXMOX_SECRET = "somegeneratedapitokenguidefromtheproxmoxui"
 
 mage test:integration
 ```
-
-
