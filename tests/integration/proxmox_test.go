@@ -13,7 +13,7 @@ import (
 	"time"
 
 	"github.com/diskfs/go-diskfs/filesystem/iso9660"
-	"github.com/luthermonson/go-proxmox"
+	"github.com/phaus/go-proxmox"
 	"github.com/stretchr/testify/assert"
 )
 
